@@ -1,0 +1,170 @@
+{
+    "version": 1,
+    "author": "Anonymous maker",
+    "editor": "wokwi",
+    "parts": [
+      { "type": "wokwi-breadboard-half", "id": "bb1", "top": -22.2, "left": -26, "attrs": {} },
+      {
+        "type": "wokwi-esp32-devkit-v1",
+        "id": "esp",
+        "top": -27.2,
+        "left": 0.5,
+        "rotate": 90,
+        "attrs": {}
+      },
+      { "type": "board-ssd1306", "id": "oled1", "top": 22.34, "left": 163.43, "attrs": {} },
+      {
+        "type": "wokwi-pushbutton",
+        "id": "btn1",
+        "top": 207.8,
+        "left": -19.2,
+        "attrs": { "color": "black" }
+      },
+      {
+        "type": "wokwi-pushbutton",
+        "id": "btn2",
+        "top": 207.8,
+        "left": 57.6,
+        "attrs": { "color": "black" }
+      },
+      {
+        "type": "wokwi-pushbutton",
+        "id": "btn3",
+        "top": 207.8,
+        "left": 134.4,
+        "attrs": { "color": "black" }
+      },
+      {
+        "type": "wokwi-pushbutton",
+        "id": "btn4",
+        "top": 265.4,
+        "left": -19.2,
+        "attrs": { "color": "black" }
+      },
+      {
+        "type": "wokwi-pushbutton",
+        "id": "btn5",
+        "top": 265.4,
+        "left": 57.6,
+        "attrs": { "color": "black" }
+      },
+      {
+        "type": "wokwi-pushbutton",
+        "id": "btn6",
+        "top": 265.4,
+        "left": 134.4,
+        "attrs": { "color": "black" }
+      },
+      {
+        "type": "wokwi-pushbutton",
+        "id": "btn7",
+        "top": 323,
+        "left": -19.2,
+        "attrs": { "color": "black" }
+      },
+      {
+        "type": "wokwi-pushbutton",
+        "id": "btn8",
+        "top": 323,
+        "left": 57.6,
+        "attrs": { "color": "black" }
+      },
+      {
+        "type": "wokwi-pushbutton",
+        "id": "btn9",
+        "top": 323,
+        "left": 134.4,
+        "attrs": { "color": "black" }
+      },
+      {
+        "type": "wokwi-pushbutton",
+        "id": "btn10",
+        "top": 380.6,
+        "left": -19.2,
+        "attrs": { "color": "black" }
+      },
+      {
+        "type": "wokwi-pushbutton",
+        "id": "btn11",
+        "top": 380.6,
+        "left": 57.6,
+        "attrs": { "color": "black" }
+      },
+      {
+        "type": "wokwi-pushbutton",
+        "id": "btn12",
+        "top": 380.6,
+        "left": 134.4,
+        "attrs": { "color": "black" }
+      }
+    ],
+    "connections": [
+      [ "esp:TX0", "$serialMonitor:RX", "", [] ],
+      [ "esp:RX0", "$serialMonitor:TX", "", [] ],
+      [ "esp:GND.1", "bb1:tn.1", "black", [ "v18.9", "h-57.5", "v-144" ] ],
+      [ "esp:3V3", "bb1:tp.1", "red", [ "v9.3", "h-57.6", "v-144" ] ],
+      [ "oled1:GND", "bb1:tn.2", "black", [ "v-19.2", "h-182.4" ] ],
+      [ "oled1:VCC", "bb1:tp.2", "red", [ "v-28.8", "h-191.85", "v-9.9" ] ],
+      [ "oled1:SDA", "bb1:11b.j", "blue", [ "v-19.2", "h67.27", "v144", "h-201.6" ] ],
+      [ "oled1:SCL", "bb1:14b.j", "orange", [ "v-28.8", "h86.7", "v163.2", "h-182.4" ] ],
+      [ "esp:GND.1", "bb1:bn.1", "black", [ "v28.5", "h-9.5", "v19.2" ] ],
+      [ "btn1:2.l", "bb1:bn.2", "black", [ "h-9.6", "v-38.2", "h48" ] ],
+      [ "btn2:2.l", "bb1:bn.3", "black", [ "h-9.6", "v-38.2", "h-19.2" ] ],
+      [ "btn3:2.l", "bb1:bn.4", "black", [ "h-9.6", "v-38.2", "h-86.4" ] ],
+      [ "btn4:2.l", "bb1:bn.5", "black", [ "h-9.6", "v-95.8", "h76.8" ] ],
+      [ "btn5:2.l", "bb1:bn.6", "black", [ "h-9.6", "v-95.8", "h19.2" ] ],
+      [ "btn6:2.l", "bb1:bn.7", "black", [ "h-9.6", "v-95.8", "h-48" ] ],
+      [ "btn7:2.l", "bb1:bn.8", "black", [ "h-9.6", "v-153.4", "h115.2" ] ],
+      [ "btn8:2.l", "bb1:bn.9", "black", [ "h-9.6", "v-153.4", "h48" ] ],
+      [ "btn9:2.l", "bb1:bn.10", "black", [ "h-9.6", "v-153.4", "h-19.2" ] ],
+      [ "btn10:2.l", "bb1:bn.11", "black", [ "h-9.6", "v-211", "h153.6" ] ],
+      [ "btn11:2.l", "bb1:bn.12", "black", [ "h-9.6", "v-211", "h86.4" ] ],
+      [ "btn12:2.l", "bb1:bn.13", "black", [ "h-9.6", "v-211", "h19.2" ] ],
+      [ "btn1:1.l", "bb1:3b.j", "orange", [ "h-19.2", "v-67.2", "h57.6" ] ],
+      [ "btn2:1.l", "bb1:4b.j", "gold", [ "h-9.6", "v-67.2", "h-19.2" ] ],
+      [ "btn3:1.l", "bb1:5b.j", "green", [ "h-19.2", "v-67.2", "h-76.8" ] ],
+      [ "btn4:1.l", "bb1:8b.j", "orange", [ "h-28.8", "v-134.4", "h115.2" ] ],
+      [ "btn5:1.l", "bb1:9b.j", "gold", [ "h-9.6", "v-134.4", "h28.8" ] ],
+      [ "btn6:1.l", "bb1:10b.j", "green", [ "h-19.2", "v-134.4", "h-28.8" ] ],
+      [ "oled1:GND", "bb1:22t.a", "", [ "$bb" ] ],
+      [ "oled1:VCC", "bb1:23t.a", "", [ "$bb" ] ],
+      [ "oled1:SCL", "bb1:24t.a", "", [ "$bb" ] ],
+      [ "oled1:SDA", "bb1:25t.a", "", [ "$bb" ] ],
+      [ "esp:VIN", "bb1:1t.a", "", [ "$bb" ] ],
+      [ "esp:GND.2", "bb1:2t.a", "", [ "$bb" ] ],
+      [ "esp:D13", "bb1:3t.a", "", [ "$bb" ] ],
+      [ "esp:D12", "bb1:4t.a", "", [ "$bb" ] ],
+      [ "esp:D14", "bb1:5t.a", "", [ "$bb" ] ],
+      [ "esp:D27", "bb1:6t.a", "", [ "$bb" ] ],
+      [ "esp:D26", "bb1:7t.a", "", [ "$bb" ] ],
+      [ "esp:D25", "bb1:8t.a", "", [ "$bb" ] ],
+      [ "esp:D33", "bb1:9t.a", "", [ "$bb" ] ],
+      [ "esp:D32", "bb1:10t.a", "", [ "$bb" ] ],
+      [ "esp:D35", "bb1:11t.a", "", [ "$bb" ] ],
+      [ "esp:D34", "bb1:12t.a", "", [ "$bb" ] ],
+      [ "esp:VN", "bb1:13t.a", "", [ "$bb" ] ],
+      [ "esp:VP", "bb1:14t.a", "", [ "$bb" ] ],
+      [ "esp:EN", "bb1:15t.a", "", [ "$bb" ] ],
+      [ "esp:3V3", "bb1:1b.i", "", [ "$bb" ] ],
+      [ "esp:GND.1", "bb1:2b.i", "", [ "$bb" ] ],
+      [ "esp:D15", "bb1:3b.i", "", [ "$bb" ] ],
+      [ "esp:D2", "bb1:4b.i", "", [ "$bb" ] ],
+      [ "esp:D4", "bb1:5b.i", "", [ "$bb" ] ],
+      [ "esp:RX2", "bb1:6b.i", "", [ "$bb" ] ],
+      [ "esp:TX2", "bb1:7b.i", "", [ "$bb" ] ],
+      [ "esp:D5", "bb1:8b.i", "", [ "$bb" ] ],
+      [ "esp:D18", "bb1:9b.i", "", [ "$bb" ] ],
+      [ "esp:D19", "bb1:10b.i", "", [ "$bb" ] ],
+      [ "esp:D21", "bb1:11b.i", "", [ "$bb" ] ],
+      [ "esp:RX0", "bb1:12b.i", "", [ "$bb" ] ],
+      [ "esp:TX0", "bb1:13b.i", "", [ "$bb" ] ],
+      [ "esp:D22", "bb1:14b.i", "", [ "$bb" ] ],
+      [ "esp:D23", "bb1:15b.i", "", [ "$bb" ] ],
+      [ "btn7:1.l", "esp:D13", "orange", [ "h-48", "v-364.8", "h86.4" ] ],
+      [ "btn8:1.l", "esp:D12", "gold", [ "h0", "v-19.2", "h-134.4", "v-355.2", "h105.6" ] ],
+      [ "btn9:1.l", "esp:D14", "green", [ "h0", "v-19.2", "h-220.8", "v-364.8", "h124.8" ] ],
+      [ "btn10:1.l", "esp:D27", "orange", [ "h-76.8", "v-451.2", "h144" ] ],
+      [ "btn11:1.l", "esp:D26", "gold", [ "h0", "v-19.2", "h-163.2", "v-441.6", "h163.2" ] ],
+      [ "btn12:1.l", "esp:D25", "green", [ "h0", "v-19.2", "h-249.6", "v-451.2", "h182.4" ] ]
+    ]
+  }
